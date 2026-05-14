@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumit Yadav | HR Leader & AI Innovator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;600;700&family=Playfair+Display:wght@600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --midnight: #0a1929;
+            --navy: #1a2942;
+            --teal: #2dd4bf;
+            --coral: #fb7185;
+            --cream: #fef3c7;
+            --warm-white: #fafaf9;
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --text-muted: #94a3b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Karla', sans-serif;
+            background: var(--midnight);
+            color: var(--text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* Background Pattern */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(45, 212, 191, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(251, 113, 133, 0.03) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(10, 25, 41, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(45, 212, 191, 0.1);
+            padding: 1.5rem 0;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--teal), var(--coral));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--teal);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--teal);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 6rem;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .hero-label {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(45, 212, 191, 0.1);
+            border: 1px solid rgba(45, 212, 191, 0.3);
+            border-radius: 50px;
+            color: var(--teal);
+            font-size: 0.875rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.6s ease-out 0.2s both;
+        }
+
+        .hero h1 .highlight {
+            background: linear-gradient(135deg, var(--teal), var(--coral));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            animation: fadeInUp 0.6s ease-out 0.4s both;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.6s ease-out 0.6s both;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--teal), #22c55e);
+            color: var(--midnight);
+            box-shadow: 0 4px 20px rgba(45, 212, 191, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(45, 212, 191, 0.4);
+        }
+
+        .btn-secondary {
+            background: rgba(45, 212, 191, 0.1);
+            color: var(--teal);
+            border: 1px solid rgba(45, 212, 191, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(45, 212, 191, 0.2);
+            border-color: var(--teal);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 6rem 0;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-label {
+            color: var(--teal);
+            font-size: 0.875rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            color: var(--text-secondary);
+            font-size: 1.125rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            gap: 3rem;
+        }
+
+        .project-card {
+            background: linear-gradient(135deg, rgba(26, 41, 66, 0.5), rgba(26, 41, 66, 0.3));
+            border: 1px solid rgba(45, 212, 191, 0.1);
+            border-radius: 16px;
+            padding: 3rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--teal), var(--coral));
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(45, 212, 191, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-card:hover::before {
+            opacity: 1;
+        }
+
+        .project-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--teal), var(--coral));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .project-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-role {
+            color: var(--teal);
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .project-description {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .project-highlights {
+            margin-bottom: 1.5rem;
+        }
+
+        .project-highlights h4 {
+            color: var(--teal);
+            font-size: 0.875rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        .project-highlights ul {
+            list-style: none;
+            display: grid;
+            gap: 0.75rem;
+        }
+
+        .project-highlights li {
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-secondary);
+        }
+
+        .project-highlights li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--teal);
+            font-weight: 700;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tech-tag {
+            padding: 0.4rem 1rem;
+            background: rgba(45, 212, 191, 0.1);
+            border: 1px solid rgba(45, 212, 191, 0.2);
+            border-radius: 50px;
+            color: var(--teal);
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        /* Capabilities Section */
+        .capabilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .capability-card {
+            padding: 2rem;
+            background: rgba(26, 41, 66, 0.3);
+            border: 1px solid rgba(45, 212, 191, 0.1);
+            border-radius: 12px;
+            transition: all 0.3s;
+        }
+
+        .capability-card:hover {
+            border-color: rgba(45, 212, 191, 0.3);
+            transform: translateY(-4px);
+        }
+
+        .capability-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--teal), var(--coral));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .capability-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+        }
+
+        .capability-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Journey Section */
+        .journey-timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .journey-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--teal), var(--coral));
+        }
+
+        .journey-item {
+            position: relative;
+            padding-left: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .journey-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 0;
+            width: 18px;
+            height: 18px;
+            background: var(--midnight);
+            border: 3px solid var(--teal);
+            border-radius: 50%;
+        }
+
+        .journey-period {
+            color: var(--teal);
+            font-weight: 600;
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .journey-company {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .journey-role {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .journey-description {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Value Section */
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .value-card {
+            padding: 2.5rem;
+            background: linear-gradient(135deg, rgba(26, 41, 66, 0.5), rgba(26, 41, 66, 0.3));
+            border: 1px solid rgba(45, 212, 191, 0.1);
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .value-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--teal), var(--coral));
+        }
+
+        .value-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--teal), var(--coral));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            line-height: 1;
+        }
+
+        .value-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .value-card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Contact Section */
+        .contact-content {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: rgba(45, 212, 191, 0.1);
+            border: 1px solid rgba(45, 212, 191, 0.2);
+            border-radius: 8px;
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+
+        .contact-link:hover {
+            background: rgba(45, 212, 191, 0.2);
+            border-color: var(--teal);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            padding: 3rem 0;
+            text-align: center;
+            border-top: 1px solid rgba(45, 212, 191, 0.1);
+            color: var(--text-muted);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .project-card {
+                padding: 2rem;
+            }
+
+            section {
+                padding: 4rem 0;
+            }
+
+            .journey-timeline::before {
+                left: 0;
+            }
+
+            .journey-item {
+                padding-left: 2rem;
+            }
+        }
+
+        /* Scroll Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">SY</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#capabilities">Capabilities</a></li>
+                <li><a href="#journey">Journey</a></li>
+                <li><a href="#value">Value</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-label">HR Leader • AI Innovator • Digital Transformer</span>
+                <h1>Building the future of <span class="highlight">People & Performance</span> with AI</h1>
+                <p class="hero-subtitle">
+                    Strategic HR Business Partner with 10+ years of experience bridging human expertise and artificial intelligence. 
+                    Currently at Freshworks, pioneering AI-driven HR tools that transform how 5,000+ employees grow, perform, and thrive.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Portfolio</div>
+                <h2 class="section-title">AI-Powered HR Innovation</h2>
+                <p class="section-subtitle">
+                    Moving beyond theory to actual implementation — building production-grade AI tools that solve real organizational challenges
+                </p>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1: FreshPaths -->
+                <div class="project-card reveal">
+                    <div class="project-header">
+                        <div class="project-icon">🚀</div>
+                        <div>
+                            <h3 class="project-title">FreshPaths TA Career Navigator</h3>
+                            <div class="project-role">AI Career Architecture Platform</div>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        An interactive, AI-powered career architecture platform for the Talent Acquisition organization. 
+                        Transforms static HR data into a dynamic career coaching tool using Google's Gemini 2.5 Flash API, 
+                        helping employees map their progression from entry-level to VP leadership with personalized AI-generated strategies.
+                    </p>
+                    <div class="project-highlights">
+                        <h4>Key Features</h4>
+                        <ul>
+                            <li><strong>Strategic Action Planning:</strong> AI generates 5 high-impact actions for role transitions based on structural gaps</li>
+                            <li><strong>Interview Preparation:</strong> Tailored behavioral questions with model answer blueprints for target roles</li>
+                            <li><strong>Conversational AI Assistant:</strong> Context-aware chatbot answers nuanced career questions in real-time</li>
+                            <li><strong>Visual Pathfinder Tool:</strong> Interactive calculator showing exact gaps between current and target positions</li>
+                        </ul>
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Google Gemini 2.5 Flash</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">LLM Integration</span>
+                        <span class="tech-tag">Career Architecture</span>
+                    </div>
+                </div>
+
+                <!-- Project 2: Performance Portal -->
+                <div class="project-card reveal">
+                    <div class="project-header">
+                        <div class="project-icon">📊</div>
+                        <div>
+                            <h3 class="project-title">Performance Feedback & Calibration Portal</h3>
+                            <div class="project-role">Enterprise Performance Management System</div>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        A secure, privacy-first platform that revolutionizes organizational performance reviews by structurally 
+                        separating employee feedback from leadership calibration data. Enables transparent, bias-free performance 
+                        management at scale with complete audit trails and role-based access control.
+                    </p>
+                    <div class="project-highlights">
+                        <h4>Technical Achievements</h4>
+                        <ul>
+                            <li><strong>Privacy-First Architecture:</strong> Multi-layered data model isolating confidential calibration data using React and Firestore</li>
+                            <li><strong>Advanced RBAC:</strong> Complex security logic for 4 distinct personas (Employees, Managers, HRBPs, Admins)</li>
+                            <li><strong>Calibration Engine:</strong> Specialized module for vetting ratings across departments to ensure fairness</li>
+                            <li><strong>Immutable Audit Trail:</strong> Legally defensible logging of every state transition and administrative override</li>
+                        </ul>
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">React 18</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Firebase</span>
+                        <span class="tech-tag">Firestore</span>
+                        <span class="tech-tag">Recharts</span>
+                        <span class="tech-tag">Tailwind CSS</span>
+                    </div>
+                </div>
+
+                <!-- Project 3: Fresh Impact Hub -->
+                <div class="project-card reveal">
+                    <div class="project-header">
+                        <div class="project-icon">🎯</div>
+                        <div>
+                            <h3 class="project-title">Fresh Impact Hub</h3>
+                            <div class="project-role">Interactive Performance Review Portal</div>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        A centralized web portal that transforms the annual performance review cycle from confusion to clarity. 
+                        Guides employees and managers through complex process changes, timeline milestones, and new leadership behaviors 
+                        with an engaging, interactive user experience.
+                    </p>
+                    <div class="project-highlights">
+                        <h4>Impact Delivered</h4>
+                        <ul>
+                            <li><strong>Change Management:</strong> Successfully guided organization through Lattice to Workday migration and new leadership framework</li>
+                            <li><strong>Process Transparency:</strong> Dynamic real-time timeline demystifying multi-month review process</li>
+                            <li><strong>Manager Empowerment:</strong> Educated managers on expanded responsibilities and inclusive promotion nomination</li>
+                            <li><strong>Standardized Metrics:</strong> Interactive bell curve and rating tiles ensuring fairness across departments</li>
+                        </ul>
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">Tailwind CSS</span>
+                        <span class="tech-tag">Vanilla JavaScript</span>
+                        <span class="tech-tag">Custom SVG</span>
+                        <span class="tech-tag">UX Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Capabilities Section -->
+    <section id="capabilities">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Expertise</div>
+                <h2 class="section-title">Core Capabilities</h2>
+                <p class="section-subtitle">
+                    A unique blend of strategic HR leadership and technical innovation
+                </p>
+            </div>
+
+            <div class="capabilities-grid">
+                <div class="capability-card reveal">
+                    <div class="capability-icon">🤖</div>
+                    <h3>AI & HR Tech Integration</h3>
+                    <p>Building production-grade AI tools using LLMs (Gemini, GPT) to solve real HR challenges. Expertise in prompt engineering, API integration, and creating AI-powered user experiences.</p>
+                </div>
+
+                <div class="capability-card reveal">
+                    <div class="capability-icon">⚡</div>
+                    <h3>Performance Management</h3>
+                    <p>End-to-end performance cycle design and execution at scale. Pioneering AI-assisted rating systems and conversational performance assistants for 5,000+ employees.</p>
+                </div>
+
+                <div class="capability-card reveal">
+                    <div class="capability-icon">🎯</div>
+                    <h3>Talent Development</h3>
+                    <p>Career architecture frameworks, succession planning, and skill-based models. Created dynamic career pathing tools with AI-generated development strategies.</p>
+                </div>
+
+                <div class="capability-card reveal">
+                    <div class="capability-icon">📈</div>
+                    <h3>Employee Engagement</h3>
+                    <p>Continuous listening strategies, eNPS tracking, and action planning. Implemented automated recognition programs and engagement survey frameworks.</p>
+                </div>
+
+                <div class="capability-card reveal">
+                    <div class="capability-icon">🛠️</div>
+                    <h3>Digital Transformation</h3>
+                    <p>Leading HR tech stack implementation from concept to deployment. Experience with React, Firebase, TypeScript, and modern web technologies.</p>
+                </div>
+
+                <div class="capability-card reveal">
+                    <div class="capability-icon">📊</div>
+                    <h3>HR Analytics & Strategy</h3>
+                    <p>Data-driven decision making with advanced analytics. Building dashboards, predictive models, and strategic workforce planning for post-IPO organizations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Journey Section -->
+    <section id="journey">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Career Path</div>
+                <h2 class="section-title">Professional Journey</h2>
+                <p class="section-subtitle">
+                    A decade of evolution from traditional HRBP to AI-driven HR innovator
+                </p>
+            </div>
+
+            <div class="journey-timeline">
+                <div class="journey-item reveal">
+                    <div class="journey-period">August 2025 - Present</div>
+                    <div class="journey-company">Freshworks</div>
+                    <div class="journey-role">HR Business Partner & Talent Leader</div>
+                    <div class="journey-description">
+                        Spearheading performance management, AI tools integration, and career frameworks for a 5,000-person post-IPO organization. 
+                        Building a progressive AI suite within HR — piloting dynamic career pathing tools, developing AI-assisted rating systems, 
+                        and launching conversational performance assistants that integrate seamlessly into daily workflows.
+                    </div>
+                </div>
+
+                <div class="journey-item reveal">
+                    <div class="journey-period">June 2023 - August 2025</div>
+                    <div class="journey-company">Bajaj Finserv</div>
+                    <div class="journey-role">Cluster Manager - HRBP</div>
+                    <div class="journey-description">
+                        Managed complete employee lifecycle serving as strategic partner to business leaders. 
+                        Executed mid-year and annual PMS cycles, drove goal-setting processes, and collaborated with 
+                        L&D teams to conduct training needs analysis and execute capability-building programs.
+                    </div>
+                </div>
+
+                <div class="journey-item reveal">
+                    <div class="journey-period">August 2021 - June 2023</div>
+                    <div class="journey-company">Rapido</div>
+                    <div class="journey-role">Talent Management Specialist</div>
+                    <div class="journey-description">
+                        Led digital transformation initiatives by launching Performance Management tool, OKR & Goal Setting tool, 
+                        and continuous listening mechanisms. Developed skill-based models for tech departments, formulated eNPS 
+                        tracking frameworks, and implemented automated recognition programs (Superspido, Gratitude at Rapido).
+                    </div>
+                </div>
+
+                <div class="journey-item reveal">
+                    <div class="journey-period">July 2020 - July 2021</div>
+                    <div class="journey-company">Byju's</div>
+                    <div class="journey-role">Manager HRBP</div>
+                    <div class="journey-description">
+                        Built targeted development programs for Sales managers and executives. Partnered with Sales leadership 
+                        on change management and performance improvement. Successfully deployed R&R plan linked to sales 
+                        performance with automated portal for top performer visibility.
+                    </div>
+                </div>
+
+                <div class="journey-item reveal">
+                    <div class="journey-period">April 2019 - July 2020</div>
+                    <div class="journey-company">McDonald's India</div>
+                    <div class="journey-role">HRBP</div>
+                    <div class="journey-description">
+                        Led Performance Management system and talent calibration across all levels. Managed Employee Relations 
+                        and Compliance, conducted comprehensive HR analytics including employee opinion surveys and attrition analysis. 
+                        Drove full-cycle recruitment for new store openings and campus hires.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Section -->
+    <section id="value">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Impact</div>
+                <h2 class="section-title">Where I Add Value</h2>
+                <p class="section-subtitle">
+                    The unique intersection of HR expertise and technical execution
+                </p>
+            </div>
+
+            <div class="value-grid">
+                <div class="value-card reveal">
+                    <div class="value-number">01</div>
+                    <h3>Strategic-Tactical Bridge</h3>
+                    <p>
+                        I don't just conceptualize HR solutions — I build them. With hands-on experience in React, Firebase, 
+                        TypeScript, and LLM APIs, I translate strategic vision into production-grade tools that employees actually use.
+                    </p>
+                </div>
+
+                <div class="value-card reveal">
+                    <div class="value-number">02</div>
+                    <h3>AI Implementation, Not Just Integration</h3>
+                    <p>
+                        Moving beyond "AI-assisted" to actually implementing Generative AI that delivers measurable value. 
+                        I engineer prompt strategies, design context architectures, and build AI experiences that feel natural and helpful.
+                    </p>
+                </div>
+
+                <div class="value-card reveal">
+                    <div class="value-number">03</div>
+                    <h3>Scale & Post-IPO Experience</h3>
+                    <p>
+                        Proven track record of implementing HR frameworks in high-growth, post-IPO environments. 
+                        I understand the complexities of scaling people processes while maintaining quality and compliance.
+                    </p>
+                </div>
+
+                <div class="value-card reveal">
+                    <div class="value-number">04</div>
+                    <h3>Data-Driven Empathy</h3>
+                    <p>
+                        I combine rigorous data analysis with genuine people insight. Building tools that respect privacy, 
+                        reduce bias, and empower both employees and managers to make better decisions about career growth.
+                    </p>
+                </div>
+
+                <div class="value-card reveal">
+                    <div class="value-number">05</div>
+                    <h3>Change Management at Scale</h3>
+                    <p>
+                        Successfully guided thousands of employees through major process transformations, technology migrations, 
+                        and cultural shifts. I create experiences that make change feel inevitable rather than imposing.
+                    </p>
+                </div>
+
+                <div class="value-card reveal">
+                    <div class="value-number">06</div>
+                    <h3>Future-Ready HR Leadership</h3>
+                    <p>
+                        Positioned at the forefront of HR's evolution. As AI reshapes work, I'm not preparing for the future — 
+                        I'm actively building it, one production deployment at a time.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="section-header">
+                    <div class="section-label">Get in Touch</div>
+                    <h2 class="section-title">Let's Connect</h2>
+                    <p class="section-subtitle">
+                        Interested in discussing AI in HR, exploring collaboration opportunities, or just want to chat about 
+                        the future of work? I'd love to hear from you.
+                    </p>
+                </div>
+
+                <div class="contact-links">
+                    <a href="mailto:yadavsumit1301@gmail.com" class="contact-link">
+                        <span>📧</span>
+                        <span>Email Me</span>
+                    </a>
+                    <a href="tel:+917720092918" class="contact-link">
+                        <span>📱</span>
+                        <span>Call Me</span>
+                    </a>
+                    <a href="https://linkedin.com/in/sumit-yadav" class="contact-link" target="_blank">
+                        <span>💼</span>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Sumit Yadav. Building the future of People & Performance with AI.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll reveal animation
+        const revealElements = document.querySelectorAll('.reveal');
+        
+        const reveal = () => {
+            revealElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('active');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', reveal);
+        reveal(); // Initial check
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar background on scroll
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(10, 25, 41, 0.95)';
+            } else {
+                nav.style.background = 'rgba(10, 25, 41, 0.8)';
+            }
+        });
+    </script>
+</body>
+</html>
